@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pandas
+openpyxl
+google-generativeai
+python-dotenv
+python-multipart
+pdfplumber
+fuzzywuzzy
+python-Levenshtein
+python-calamine

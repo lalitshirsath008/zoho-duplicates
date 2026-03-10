@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Data Reconciler Pro | Smart Matching</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Data Reconciler Pro</h1>
+            <p style="color: var(--text-muted)">Excel/ODS & Multi-Dataset (Zoho) Reconciliation</p>
+        </header>
+
+        <section class="upload-grid">
+            <div class="card">
+                <h3>1. Source RFQ Document (Excel/ODS/CSV)</h3>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">Upload Excel, ODS, or CSV containing RFQ numbers</p>
+                <div class="upload-box" id="excel-drop">
+                    <p>Select File (.xlsx, .ods, .csv)</p>
+                    <input type="file" id="excel-input" accept=".xlsx, .xls, .ods, .csv" style="display: none">
+                </div>
+                <div id="excel-info" style="margin-top: 10px; color: var(--success); font-weight: bold;"></div>
+            </div>
+
+            <div class="card">
+                <h3>2. Zoho RFQ Export (CSV)</h3>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">Upload Zoho CSV(s) with 'RFQ No' column</p>
+                <div class="upload-box" id="zoho-drop">
+                    <p>Select CSV Files</p>
+                    <input type="file" id="zoho-input" accept=".csv" multiple style="display: none">
+                </div>
+                <div id="zoho-info" style="margin-top: 10px; color: var(--success); font-weight: bold;"></div>
+            </div>
+        </section>
+
+        <div style="text-align: center;">
+            <button id="run-btn" class="btn" style="max-width: 300px;">Run RFQ Reconciliation</button>
+        </div>
+
+        <section id="results-section">
+            <div class="stats-grid" style="margin-top: 2rem;">
+                <div class="stat-card">
+                    <span class="stat-value" id="stat-excel">0</span>
+                    <span class="stat-label">Total RFQ in Source</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="stat-zoho">0</span>
+                    <span class="stat-label">Total RFQ in Zoho</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="stat-matched">0</span>
+                    <span class="stat-label">Matched RFQ</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="stat-mismatches" style="color: var(--error);">0</span>
+                    <span class="stat-label">Missing RFQs</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="stat-duplicates" style="color: #f59e0b;">0</span>
+                    <span class="stat-label">Duplicate RFQ</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>📋 Missing RFQ Report</h3>
+                <div id="report-content" style="margin-top: 1rem;">
+                    <!-- Missing RFQs table goes here -->
+                </div>
+            </div>
+
+            <div class="card" id="duplicate-section" style="margin-top: 2rem;">
+                <h3>🔄 Zoho Duplicate Report</h3>
+                <div id="duplicate-content" style="margin-top: 1rem;">
+                    <!-- Duplicate RFQs table goes here -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js?v=3"></script>
+</body>
+</html>

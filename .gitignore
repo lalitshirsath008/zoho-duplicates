@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Data and Uploads
+data/uploads/*
+!data/uploads/.gitkeep
+
+# Project specific
+headers_output.txt
+reproduce_duplicates.py
+inspect_headers.py
+inspect_ods.py
+test_engine.py
+test_ods.py
+find_best_rfq_col.py
+inspect_cols.py
+inspect_zoho.py
+final_test.py

@@ -1,0 +1,6 @@
+InvoiceNumber,Date,Quantity,ClientName
+INV-001,2024-03-01,100,Alpha Corp
+INV-002,2024-03-02,250,Beta Inc
+INV-004,2024-03-04,150,Delta Co
+INV-005,2024-03-05,290,Epsilon Org
+INV-006,2024-03-06,500,Zeta Ltd
