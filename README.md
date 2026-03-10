@@ -26,11 +26,10 @@ This tool automates the process of matching Excel sheets to Zoho Analytics datas
    python generate_sample_data.py
    ```
 
-4. **Run the Backend**:
-   ```bash
-   python main.py
-   ```
-   The API will start at `http://localhost:8000`.
+### Execution ⚙️
+1. **Local**: `python app.py` (Runs on port 8005)
+2. **Production (Render)**:
+   - Start Command: `gunicorn -k uvicorn.workers.UvicornWorker app:app`
 
 5. **Open the Frontend**:
    Simply open `frontend/index.html` in your web browser (or serve it using a local server).
