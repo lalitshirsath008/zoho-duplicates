@@ -9,3 +9,5 @@ pdfplumber
 fuzzywuzzy
 python-Levenshtein
 python-calamine
+gunicorn
+uvicorn[standard]
